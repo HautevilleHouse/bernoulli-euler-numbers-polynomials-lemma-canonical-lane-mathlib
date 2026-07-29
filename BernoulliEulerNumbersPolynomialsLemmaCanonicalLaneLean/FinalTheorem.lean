@@ -1,0 +1,14 @@
+import HautevilleHouse.BernoulliEulerNumbersPolynomialsLemmaCanonicalLaneLean.BridgeGateLemmas
+
+namespace HautevilleHouse
+namespace BernoulliEulerNumbersPolynomialsLemmaCanonicalLaneLean
+
+def ConstrainedBernoulliEulerClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_bernoulli_euler_closure (A : AdmissibleClass) :
+    ConstrainedBernoulliEulerClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end BernoulliEulerNumbersPolynomialsLemmaCanonicalLaneLean
+end HautevilleHouse
